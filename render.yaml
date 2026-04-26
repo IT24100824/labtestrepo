@@ -23,7 +23,4 @@ services:
     staticSitePath: frontend/dist
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: item-manager-backend
-          property: host
+        value: ${item-manager-backend.host}/api
